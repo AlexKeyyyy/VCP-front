@@ -1,0 +1,37 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // Полупрозрачный черный фон
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; // Убедитесь, что модальное окно на переднем плане
+}
+
+.modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; // Убедитесь, что содержимое модального окна выше фона
+}
+
+.closeButton {
+    position: absolute;
+    top: -165px;
+    right: -5px;
+    // position:fixed;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(255, 255, 255); // Убедитесь, что цвет черный
+    z-index: 1002; // Убедитесь, что кнопка закрытия выше содержимого модального окна
+}

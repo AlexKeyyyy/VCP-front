@@ -1,0 +1,97 @@
+.content {
+    .container {
+        position: relative;
+        max-width: 1420px;
+        margin: 30px auto 0 auto;
+        width: 55%;
+
+        .layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 150px;
+        }
+
+        .task-container,
+        .account-container,
+        .results-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .image-container-task,
+        .image-container-res,
+        .image-container-acc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            position: absolute;
+            left: -120px;
+        }
+
+        .task-block,
+        .account-block,
+        .results-block {
+            border-radius: 8px;
+                display: inline-block;
+                padding: 13px;
+                width: 316px;
+                height: 102px;
+                box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.25);
+                background: radial-gradient(231% 135.8% at 0.9% 2.98%, #c5c5c5 0%, #d63045 100%);
+                transition: background 0.5s ease;
+            
+                &:hover,
+                &:focus {
+                    background: radial-gradient(231% 135.8% at 0.9% 2.98%, #d63045 0%, #c5c5c5 100%);
+                }
+            
+                &:active {
+                    background: radial-gradient(231% 135.8% at 0.9% 2.98%, #c5c5c5 0%, #d63045 100%);
+                }
+
+            p {
+                font-family: "Open Sans";
+                font-weight: bold;
+                font-size: 50px;
+                text-transform: uppercase;
+                color: #ffffff;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .account-block {
+            background: radial-gradient(231% 135.8% at 0.9% 2.98%, #c5c5c5 0%, #d63045 100%);
+            width: 548px;
+            height: 102px;
+            box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .results-block {
+            background: radial-gradient(231% 135.8% at 0.9% 2.98%, #c5c5c5 0%, #d63045 100%);
+            width: 378px;
+            height: 102px;
+            box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .ell {
+            border-radius: 18px;
+            display: inline-block;
+            position: absolute;
+            top: -80px;
+            right: 200px;
+            height: 240px;
+            width: 350px;
+        }
+    }
+}

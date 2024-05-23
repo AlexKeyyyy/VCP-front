@@ -1,0 +1,205 @@
+// импорт стилей для модального окна, если они хранятся в отдельном файле
+@import "../../../components/ModalTask/ModalTask.module.scss";
+
+$red: #d22630;
+$black: #000;
+$white: #fff;
+
+.content {
+    max-width: 1120px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h1 {
+        font-family: "Kharkiv Tone", sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $red;
+    }
+
+    .base {
+        width: 900px;
+
+        .layout {
+            background: linear-gradient(180deg, #c3ccdc 0%, #959eb7 100%);
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            gap: 36px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 23px;
+
+            .list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 40px;
+
+                p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: $black;
+                    max-width: 900px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-family: "Open Sans";
+                    font-size: 20px;
+                    text-align: right;
+                    color: $black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .action {
+            display: flex;
+            gap: 30px;
+            background: linear-gradient(to right, #c5c5c5, #d63045);
+            padding: 23px 40px;
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+
+            .edit {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 0.75rem 1.25rem;
+                border-radius: 10rem;
+                color: $red;
+                background-color: $white;
+                text-transform: uppercase;
+                font-size: 1rem;
+                letter-spacing: 0.15rem;
+                transition: all 0.3s;
+                position: relative;
+                width: 300px;
+                height: 40px;
+                font-family: "Open Sans";
+                font-weight: bold;
+                transition: opacity 0.3s;
+
+                &:active {
+                    opacity: 0.7;
+                }
+
+                &:hover {
+                    color: $white;
+                    background-color: $red;
+                }
+            }
+
+            .save {
+                border-radius: 29px;
+                font-family: "Open Sans", sans-serif;
+                padding: 2px 19px;
+                width: 165px;
+                height: 38px;
+                background: $red;
+                font-weight: 400;
+                font-size: 20px;
+                text-transform: capitalize;
+                text-align: center;
+                color: $white;
+                transition: opacity 0.3s;
+
+                &:active {
+                    opacity: 0.7;
+                }
+            }
+
+            .report {
+                background: linear-gradient(180deg, #b4b9ca 0%, #d6d9df 100%);
+                border-radius: 29px;
+                padding: 2px 23px;
+                width: 238px;
+                height: 38px;
+                font-weight: 400;
+                font-size: 20px;
+                text-align: center;
+                color: #333;
+                font-family: "Open Sans", sans-serif;
+                transition: opacity 0.3s;
+
+                &:active {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.modallayoout {
+    background: rgba(0, 0, 0, 0.8); // Полупрозрачный черный фон
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .modaltable {
+        background: $black;
+        border-radius: 18px;
+        padding: 20px;
+        color: $white;
+        width: 80%;
+        max-width: 800px;
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid $white;
+            text-align: center;
+        }
+
+        th {
+            background: $red;
+            font-size: 18px;
+            text-transform: uppercase;
+            
+        }
+
+        td {
+            background: rgba(255, 255, 255, 0.1);
+
+            input {
+                background: rgba(255, 255, 255, 0.2);
+                border: none;
+                color: $white;
+                padding: 5px;
+                width: 100%;
+            }
+        }
+
+        button {
+            background: $red;
+            border: none;
+            color: $white;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: darken($red, 30%);
+            }
+
+            &:active {
+                background: lighten($red, 30%);
+            }
+        }
+    }
+
+    .err {
+        color: $red;
+        margin-top: 50px;
+        position:absolute;
+        top:600px
+    }
+}

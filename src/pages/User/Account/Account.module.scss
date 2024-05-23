@@ -1,0 +1,135 @@
+.content {
+  max-width: 1120px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  h1 {
+    font-weight: 800;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #d22630;
+    font-family: "Open Sans";
+    font-weight: bold;
+  }
+
+  .account {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      bottom: -15px;
+      left: -15px;
+      right: -15px;
+      border-radius: 8px;
+      background: radial-gradient(
+        231% 135.8% at 0.9% 2.98%,
+        #d63045 0%,
+        #c5c5c5 100%
+      );
+      z-index: -1;
+    }
+
+    .inputs {
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      p {
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        transition: all 0.3s;
+        font-size: 20px;
+        color: white;
+        width: 190px;
+        margin-right: 20px;
+        font-weight: bold;
+        z-index: 1;
+        margin-bottom: 15px;
+      }
+
+      input {
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-family: "Open Sans";
+        background-color: #f3dddd;
+        z-index: 1;
+        margin-bottom: 15px;
+        width: 207px;
+      }
+
+      span {
+        color: white;
+        z-index: 1;
+      }
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 40px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    z-index: 1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #d22630;
+      border-radius: 10rem;
+      z-index: -2;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken(#000000, 15%);
+      transition: all 0.3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

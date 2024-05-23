@@ -1,0 +1,69 @@
+.header {
+    background: linear-gradient(38deg, #d9d9d9 0%, #ffacac 25%, #f1b1b1 50%, #dad5d5 75%, #adaaaa 100%);
+
+    .container {
+        height: 80px;
+        max-width: 1120px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .buttonContainer {
+        display: flex;
+        gap: 20px;
+        /* Расстояние между кнопками */
+    }
+
+    a {
+        button {
+            display: inline-block;
+            padding: .75rem 1.25rem;
+            border-radius: 10rem;
+            color: #fff;
+            background-color: #aa0f0f;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: .15rem;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            font-family: "Open Sans";
+            font-weight: bold;
+            z-index: 1;
+            transition: background 0.5s ease;
+            &:hover {
+                    background-color: #ffffff;
+                    /* Серый цвет фона */
+                    color: #aa0f0f;
+                    /* Красный цвет текста */
+                }
+        }
+    }
+
+    button {
+        display: inline-block;
+        padding: .75rem 1.25rem;
+        border-radius: 10rem;
+        color: #fff;
+        background-color: #aa0f0f;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: .15rem;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        font-family: "Open Sans";
+        font-weight: bold;
+        z-index: 1;
+        transition: background 0.5s ease;
+    
+        &:hover {
+            background-color: #ffffff;
+            /* Серый цвет фона */
+            color: #aa0f0f;
+            /* Красный цвет текста */
+        }
+    }
+}

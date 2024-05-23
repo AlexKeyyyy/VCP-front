@@ -1,0 +1,51 @@
+.register {
+  max-width: 1440px;
+  margin: 30px auto 0 auto;
+  form {
+      background: linear-gradient(38deg, #d9d9d9 0%, #ffacac 25%, #f1b1b1 50%, #dad5d5 75%, #adaaaa 100%);
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      margin: 20px auto 0 auto;
+      padding: 20px 0;
+      max-width: 700px;
+      label {
+          padding: 30px 0;
+          font-size: 35px;
+          text-transform: uppercase;
+          color: #d22630;
+      }
+      input {
+          border-radius: 120px;
+          padding: 0 15px;
+          text-align: center;
+          width: 437px;
+          height: 57px;
+          font-weight: 400;
+          font-size: 24px;
+          color: #333;
+      }
+      button {
+          font-size: 24px;
+          text-align: center;
+        color: white;
+            background-color: #d22630;
+          
+          border-radius: 27px;
+          padding: 11px 49px;
+          height: 47px;
+          &:hover{
+            color: #d22630;
+                background-color: white;
+          }
+      }
+      a {
+          font-size: 24px;
+          text-decoration: underline;
+          text-align: center;
+          color: #fff;
+      }
+  }
+}

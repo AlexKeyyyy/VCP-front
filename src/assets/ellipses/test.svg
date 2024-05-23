@@ -1,0 +1,31 @@
+<svg
+          width="282"
+          height="282"
+          viewBox="0 0 282 282"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="140.93"
+            cy="140.93"
+            r="140.752"
+            transform="rotate(92.5736 140.93 140.93)"
+            fill="url(#paint0_radial_87_77)"
+          />
+          <defs>
+            <radialGradient
+              id="paint0_radial_87_77"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(2.71017 8.55349) rotate(44.0741) scale(382.29 611.418)"
+            >
+              <stop offset="0%" style={{ stopColor: "rgb(255, 255, 255)" }} />
+              <stop
+                offset="37.3333454132%"
+                style={{ stopColor: "rgb(199, 203, 214)" }}
+              />
+              <stop offset="100%" style={{ stopColor: "rgb(214, 48, 69)" }} />
+            </radialGradient>
+          </defs>
+        </svg>

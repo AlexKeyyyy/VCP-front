@@ -1,0 +1,92 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); // Темный фон с большей прозрачностью
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; // Убедитесь, что модальное окно на переднем плане
+}
+
+.modal {
+    background-color: #1a1a1a; // Черный фон
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; // Убедитесь, что содержимое модального окна выше фона
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #d63045; // Красный цвет для кнопки закрытия
+    z-index: 1002; // Убедитесь, что кнопка закрытия выше содержимого модального окна
+
+    &:hover {
+        color: #ff0000; // Более яркий красный при наведении
+    }
+}
+
+.modalContent {
+    color: white; // Белый цвет текста внутри модального окна
+}
+
+.taskList,
+.userList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #d63045; // Красный фон для кнопок
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: white; 
+        color: #d63045;// Более яркий красный при наведении
+    }
+    
+}
+
+button.selected {
+    background-color: white;
+    color: #d63045; // Инвертированные цвета для выбранной кнопки
+    border: 2px solid #d63045; // Красная рамка для выбранной кнопки
+}
+
+.submitButton {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d63045;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: #ff0000; // Более яркий красный при наведении
+    }
+}
