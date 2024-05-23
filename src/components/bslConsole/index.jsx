@@ -13,7 +13,7 @@ const BSLConsole = ({ userId, taskNumber, onSubmitSuccess }) => {
         const codeText = response.data.codeText;
         console.log(codeText);
         const iframeWindow = iframeRef.current.contentWindow;
-        iframeWindow.postMessage({ type: 'setCode', codeText }, 'http://localhost:4000/');
+        iframeWindow.postMessage({ type: 'setCode', codeText }, 'https://alexkeyyyy.github.io/realBslConsole/');
       } catch (error) {
         console.error("Ошибка при загрузке кода:", error);
       }
@@ -52,19 +52,19 @@ const BSLConsole = ({ userId, taskNumber, onSubmitSuccess }) => {
 
   const handleClick = () => {
     const iframeWindow = iframeRef.current.contentWindow;
-    iframeWindow.postMessage({ type: 'getText', action: 'save' }, 'http://localhost:4000/');
+    iframeWindow.postMessage({ type: 'getText', action: 'save' }, 'https://alexkeyyyy.github.io/realBslConsole/');
   };
 
   const handleClickSubmit = () => {
     const iframeWindow = iframeRef.current.contentWindow;
-    iframeWindow.postMessage({ type: 'getText', action: 'submit' }, 'http://localhost:4000/');
+    iframeWindow.postMessage({ type: 'getText', action: 'submit' }, 'https://alexkeyyyy.github.io/realBslConsole/');
   };
 
   return (
     <div>
       <iframe
         ref={iframeRef}
-        src="http://localhost:4000/"
+        src="https://alexkeyyyy.github.io/realBslConsole/"
         title="External Content"
         width="855px"
         height="420px"
